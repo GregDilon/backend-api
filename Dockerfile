@@ -69,4 +69,5 @@ EXPOSE 80
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 
 # Start supervisor
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+# CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+CMD ["php", "-S", "0.0.0.0:80", "-t", "public"]
